@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <mat-toolbar class="mat-elevation-z6" color="primary">
+      <img class="zlogo" src="assets/ztlogo.png">
+      <div class="vertical-line">
+
+      </div>
+    <img class="hamberger" (click)="opened = !opened" src="assets/ham.png">&nbsp;
+
+
+    </mat-toolbar>
+    <mat-sidenav-container class="main-sidenav-container" (backdropClick)="opened = !opened">
+      <mat-sidenav [mode]="mode"  [opened]="opened" [fixedInViewport] ="true" [fixedTopGap] = "layoutGap" >
+    <button mat-button (click)="opened = !opened">
+    </button>
+
+    <img class="rounded-circle img-round" src="assets/nat.jpg"> <br/>
+      <label class="lbl-name">Admin manju</label>
+      <div class="btn-group-vertical btn-sidenav">
+        <!-- <span class="btn-btn" [routerLink]="['/dash']" routerLinkActive="router-link-active"   >HRMS</span><br/> -->
+        <span class="btn-btn">Projects</span><br/>
+        <span class="btn-btn">Task Boards</span><br/>
+        <span class="btn-btn">Chats</span><br/>
+        <span class="btn-btn" [routerLink]="" routerLinkActive="router-link-active">Knowledge base</span><br/>
+        <span class="btn-btn">Reports</span><br/>
+        <span class="btn-btn" [routerLink]="['/home']">Settings</span>
+      </div>
+    </mat-sidenav>
+  <!-- <app-dashboard></app-dashboard> -->
+  <!-- <app-home></app-home> -->
+  <!-- <app-login></app-login> -->
+  <router-outlet></router-outlet>
+  <!-- <app-designationdisplay></app-designationdisplay> -->
+
+
+    </mat-sidenav-container>
+  </div>
