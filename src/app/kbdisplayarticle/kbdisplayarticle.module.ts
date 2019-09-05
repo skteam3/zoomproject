@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { KbdisplayarticleComponent } from './kbdisplayarticle.component';
 import { KbDisplayarticleRoutingModule } from './kbdisplayarticle.routing';
+import { SearcharticleComponent } from './searcharticle/searcharticle.component';
 
 @NgModule({
   declarations: [
-    KbdisplayarticleComponent
+    KbdisplayarticleComponent,
+    SearcharticleComponent
   ],
   imports: [
     CommonModule,

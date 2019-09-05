@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-addarticle',
@@ -6,10 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addarticle.component.css']
 })
 export class AddarticleComponent implements OnInit {
-
-  constructor() { }
+  addForm: FormGroup;
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.addForm = this.fb.group({
+      article_id: new FormControl(),
+      article_name: new FormControl(),
+      content: new FormControl(),
+
+      category_id: new FormControl(),
+      category_name: new FormControl(),
+      category_by: new FormControl(),
+      created_by: new FormControl(),
+      created_by_name: new FormControl(),
+      created_date: new FormControl(),
+      modified_by: new FormControl(),
+      modified_by_name: new FormControl(),
+      modified_date: new FormControl(),
+      ddlcategory_name: new FormControl()
+    });
   }
+
+  onAddArticle() {}
 
 }

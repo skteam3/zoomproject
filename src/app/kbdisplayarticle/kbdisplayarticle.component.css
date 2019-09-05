@@ -1,0 +1,13 @@
+h1.header {
+  font-family: inherit;
+  margin-right: 1208px;
+  font-size: 24px;
+  color: black;
+  margin-top: 10px;
+  font-weight: 400;
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+  color: #0064ff;
+}

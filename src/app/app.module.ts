@@ -6,7 +6,6 @@ import { MatExpansionModule, MatAutocompleteModule, MatBadgeModule, MatBottomShe
 import { AppComponent } from './app.component';
 import { AddArticleModule } from './kbdisplayarticle/addarticle/addarticle.module';
 import { approuting } from './app.routing';
-import { SearcharticleModule } from './kbdisplayarticle/searcharticle/searcharticle.module';
 import { EditarticleModule } from './kbdisplayarticle/editarticle/editarticle.module';
 import { KbdisplayarticleModule } from './kbdisplayarticle/kbdisplayarticle.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
@@ -25,7 +24,7 @@ import { LoginModule } from './login/login.module';
     BrowserModule,
     KbdisplayarticleModule,
     AddArticleModule,
-    SearcharticleModule,
+    // SearcharticleModule,
     EditarticleModule,
     LoginModule,
     approuting,
