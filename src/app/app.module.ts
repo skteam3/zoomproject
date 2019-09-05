@@ -5,49 +5,40 @@ import { MatExpansionModule, MatAutocompleteModule, MatBadgeModule, MatBottomShe
 
 import { AppComponent } from './app.component';
 
-import { KbdisplayarticleComponent } from './kbdisplayarticle/kbdisplayarticle.component';
-import { AddarticleComponent } from './kbdisplayarticle/addarticle/addarticle.component';
-import { EditarticleComponent } from './kbdisplayarticle/editarticle/editarticle.component';
-import { SearcharticleComponent } from './kbdisplayarticle/searcharticle/searcharticle.component';
+// import { KbdisplayarticleComponent } from './kbdisplayarticle/kbdisplayarticle.component';
+// import { AddarticleComponent } from './kbdisplayarticle/addarticle/addarticle.component';
+// import { EditarticleComponent } from './kbdisplayarticle/editarticle/editarticle.component';
+
 import { FormsModule } from '@angular/forms';
 
 import { AddArticleModule } from './kbdisplayarticle/addarticle/addarticle.module';
 import { approuting } from './app.routing';
-import { SearcharticleModule } from './kbdisplayarticle/searcharticle/searcharticle.module';
 import { EditarticleModule } from './kbdisplayarticle/editarticle/editarticle.module';
 import { KbdisplayarticleModule } from './kbdisplayarticle/kbdisplayarticle.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { LoginModule } from './login/login.module';
-
-
-
+import {  HttpClientModule } from '@angular/common/http';
+// import { ReadmoreComponent } from './readmore/readmore.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    MainLayoutComponent
+    MainLayoutComponent,
+    // ReadmoreComponent
     // KbdisplayarticleComponent,
     // AddarticleComponent,
     // EditarticleComponent,
     // SearcharticleComponent
-
-    
-
-
   ],
   imports: [
-
     BrowserModule,FormsModule,
-
-   
+    HttpClientModule,
     KbdisplayarticleModule,
     AddArticleModule,
-    SearcharticleModule,
+    // SearcharticleModule,
     EditarticleModule,
     LoginModule,
     approuting,
-
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatToolbarModule,
