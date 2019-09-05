@@ -1,10 +1,10 @@
 .maincontainer {
-  height: 1000px;
+  height: 951px;
   width: 100%;
   background-color: #dee2e6;
   position: absolute;
-  overflow: scroll;
-}
+  overflow: auto;
+  }
 h1.header {
   font-family: inherit;
   margin-right: 1080px;
@@ -97,28 +97,30 @@ span.card-minititle {
   margin: 0px 23px;
 }
 
-mat-sidenav-container.main-sidenav-container.mat-sidenav-container {
 
-  height: 1077px;
-
+.mat-sidenav-container.main-sidenav-container.mat-sidenav-container {
+  height: 1013px;
 }
+
 .mat-drawer-content {
   position: relative;
   z-index: 1;
-  display: table;
-  height: -webkit-fill-available;
+  display: block;
+  height: 121%;
   overflow: auto;
-}
-
+  }
 .mat-sidenav-fixed {
   position: fixed;
-  background-color: lightgrey;
+  background-color:white;
   width: 10%;
 }
 
 .btn-group-vertical.btn-sidenav {
-  width: 195px;
-  background-color: white;
+  width: 211px;
+    /* background-color: #6c757d0f; */
+}
+hr.horizontal {
+  margin-top: -16px;
 }
 
 *,
@@ -127,12 +129,13 @@ mat-sidenav-container.main-sidenav-container.mat-sidenav-container {
   box-sizing: border-box;
   background-color: white;
 }
-
 span.btn-btn {
-
-  border-bottom-color: #f5f3f300;
-  background-color: #f5f4f48c;
   cursor: pointer;
+  padding: 12px 47px;
+  background-color: #d3d3d352;
+  width: -webkit-fill-available;
+  font-size: 12px;
+  font-weight: 600;
 }
 span.btn-btn:hover {
   background-color: skyblue;
@@ -153,7 +156,12 @@ img.hamberger {
   margin-top: 0px;
   margin-left: 13px;
   background-color: #002046;
-  height: 32px;
+  height: 21px;
+  color: lightgrey;
+}
+.hamberger:hover{
+  background-color: white;
+
 }
 img.zlogo {
   background-color: #002046;
@@ -163,7 +171,7 @@ img.zlogo {
   background-color: white;
   height: 57px;
   width: 1px;
-  background-color: #074a92;
+  background-color: #37485a;
   margin-left: 10px;
 }
 input.filter {
@@ -187,4 +195,16 @@ label.lbl-name {
 }
 ul.nav.justify-content-end {
   height: 5%;
+}
+img.users {
+  height: 15px;
+  /* margin-left: -4px; */
+  padding: 0px 4px;
+  background-color: #d3d3d352;
+}
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  color: #b7b4b4;
 }
