@@ -6,6 +6,7 @@ import { KbdisplayarticleComponent } from './kbdisplayarticle/kbdisplayarticle.c
 import { AddarticleComponent } from './kbdisplayarticle/addarticle/addarticle.component';
 import { EditarticleComponent } from './kbdisplayarticle/editarticle/editarticle.component';
 import { SearcharticleComponent } from './kbdisplayarticle/searcharticle/searcharticle.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { SearcharticleComponent } from './kbdisplayarticle/searcharticle/searcha
     SearcharticleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
