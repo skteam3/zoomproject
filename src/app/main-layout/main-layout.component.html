@@ -1,11 +1,17 @@
 <div class="container-fluid">
   <mat-toolbar class="mat-elevation-z6" color="primary">
-      <img class="zlogo" src="assets/ztlogo.png">
+      <img class="zlogo" src="assets/ztlogo1.png">
       <div class="vertical-line">
 
       </div>
-    <img class="hamberger" (click)="opened = !opened" src="assets/ham.png">&nbsp;
+    <img class="hamberger" (click)="opened = !opened" src="assets/menu.svg">&nbsp;
 
+    <div class="vertical-line">
+
+      </div>&nbsp;
+         <div class='search'>
+        <input class="filter"  placeholder=" Team Member Search">
+         </div>
 
     </mat-toolbar>
     <mat-sidenav-container class="main-sidenav-container" (backdropClick)="opened = !opened">
@@ -16,13 +22,20 @@
     <img class="rounded-circle img-round" src="assets/nat.jpg"> <br/>
       <label class="lbl-name">Admin manju</label>
       <div class="btn-group-vertical btn-sidenav">
-        <span class="btn-btn"    >HRMS</span><br/>
-        <span class="btn-btn">Projects</span><br/>
-        <span class="btn-btn">Task Boards</span><br/>
-        <span class="btn-btn">Chats</span><br/>
-        <span class="btn-btn" [routerLink]="['/add']" routerLinkActive="router-link-active">Knowledge base</span><br/>
-        <span class="btn-btn">Reports</span><br/>
-        <span class="btn-btn" [routerLink]="['/home']">Settings</span>
+
+        <span class="btn-btn" [routerLink]="['/dash']" routerLinkActive="router-link-active" > <img src="assets/users.svg" class="users">HRMS</span>
+        <hr class="horizontal">
+        <span class="btn-btn"> <img src="assets/bookmark.svg" class="users">Projects</span>
+        <hr class="horizontal">
+        <span class="btn-btn"><img src="assets/list.svg" class="users">Task Boards</span>
+        <hr class="horizontal">
+        <span class="btn-btn"><img src="assets/text.svg" class="users">Chats</span>
+        <hr class="horizontal">
+        <span class="btn-btn"> <img src="assets/book.svg" class="users">Knowledge base</span>
+        <hr class="horizontal">
+        <span class="btn-btn"><img src="assets/table.svg" class="users">Reports</span>
+        <hr class="horizontal">
+        <span class="btn-btn" [routerLink]="['/home']"><img src="assets/setting.png" class="users">Settings</span>
       </div>
     </mat-sidenav>
   <!-- <app-dashboard></app-dashboard> -->
