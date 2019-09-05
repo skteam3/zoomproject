@@ -5,7 +5,7 @@ import { MainLayoutComponent } from 'src/app/main-layout/main-layout.component';
 import { NgModule } from '@angular/core';
 
 const routeArr: Routes = [
-  {path: 'edit/id:' , component: MainLayoutComponent,
+  {path: 'edit' , component: MainLayoutComponent,
   children: [
   {path: '', component: EditarticleComponent}
 ]}
