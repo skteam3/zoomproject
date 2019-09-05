@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
 import { AddarticleComponent } from './addarticle.component';
 import { AddarticleRoutingModule } from './addarticle.routing';
 @NgModule({
@@ -11,7 +11,8 @@ import { AddarticleRoutingModule } from './addarticle.routing';
   imports: [
     CommonModule,
     AddarticleRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RichTextEditorAllModule
   ]
 })
 export class AddArticleModule {}

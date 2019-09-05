@@ -1,7 +1,7 @@
 export  class KBArticles {
   public constructor(
-    public ArticleId: number,
-    public ArticleName: string,
+    public  ArticleId: number,
+    public  ArticleName: string,
     public  Content: string,
     public  PreviewContent: string,
     public  CategoryId: number,
@@ -12,6 +12,6 @@ export  class KBArticles {
     public  ModifiedBy: number,
     public  ModifiedByName: string,
     public  ModifiedDate: string,
-    public DdlCatogoryName: string
+    public  DdlCatogoryName: string
   ) {}
 }

@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
      <div class="header" style="background-color: white">
       <a  class="font-light m-b-xs titlename">Edit Article </a>
       <div class="header-right">
@@ -12,8 +12,8 @@
 
      
     <form [formGroup]="kb" (ngSubmit)="onEditArticle()">
-<div class="col-md-8" style = " "> 
-<!-- <div  style="display: inline-block; vertical-align: top;border-right-width:2px solid #ddd7d7;padding-top:20px">  -->
+<div class="col-md-8" style = " ">  -->
+<!-- <div  style="display: inline-block; vertical-align: top;border-right-width:2px solid #ddd7d7;padding-top:20px"> 
 <div class="row table-responsive content" style="padding: 30px">
 <table class="table table-bordered">
    <tbody>
@@ -30,9 +30,9 @@
          <td> Category</td>
          <td>
             <select data-val="true" data-val-number="The field CategoryId must be a number." id="ideditcategory" name="CategoryId" style="width:300px;">
-               <!-- <option selected="selected" value="1">Accounts Recivables - Collections</option>
+               <option selected="selected" value="1">Accounts Recivables - Collections</option>
                <option value="3">Office - Practice Management</option>
-               <option value="2">Surgical Authorizations &amp; Verifications</option> -->
+               <option value="2">Surgical Authorizations &amp; Verifications</option>
                <option value="">Choose your category</option>
                <option *ngFor="let item of arr" [value]="item.CategoryName">{{item.CategoryName}}</option>
             </select>
@@ -55,4 +55,91 @@
  </div>
  
     
+ -->
 
+ <ul class="nav justify-content-end">
+      <h1 class="header">Edit article</h1>
+      <li class="nav-item">
+        <a class="nav-link active" ><span class='fa fa-group'></span> Dashboard</a>
+      </li>
+      <div class="vertical">
+  
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" (click)=" myArticle()"><span class='fa fa-list'></span>My Articles</a>
+      </li>
+      <div class="vertical">
+  
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" (click)="openAdd()"><span class='fa fa-book'></span>Add Articles</a>
+      </li>
+      <div class="vertical">
+  
+      </div>
+    </ul>
+  
+  
+  
+  <div class="main-contaner">
+  <form [formGroup]="kb" (ngSubmit)="onEditArticle()">
+  <div class="container">
+  
+  
+    <!-- <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-6">
+          <label><b>Article_name</b></label>
+          <input formControlName="article_name" type="text" class="form-control" >
+        </div>
+      </div>
+    <div class="row">
+      <div class="clearfix visible-xs-block"></div>
+      <div class="col-xs-6 col-sm-4 col-md-8">
+        <label><b>Description</b></label>
+        <ejs-richtexteditor formControlName="content"></ejs-richtexteditor>
+      </div>
+    </div> -->
+    <br/>
+    <table class="table table-bordered ">
+      <tbody>
+
+            <tr>
+                  <td style="width:150px;"> Article Name<span style="color:red">*</span></td>
+                  <td><input type="text" ></td>
+                </tr>
+        <tr>
+          <td>category</td>
+          <td><select formControlName="CategoryName" class="custom-select" >
+              <option value="">Choose your category</option>
+              <option *ngFor="let item of arr1" [value]="item.category">{{item.category1}}</option>
+            </select></td>
+        </tr>
+        
+        <tr>
+          <td>Description</td>
+        </tr>
+      </tbody>
+    </table>
+    <ejs-richtexteditor formControlName="Content" class="box"></ejs-richtexteditor>
+  <!-- <div class="row">
+      <div class="clearfix visible-xs-block"></div>
+      <div class="col-xs-6 col-sm-4 col-md-8">
+        <label><b>Image 1</b></label>
+       <input type="text" formControlName="" class="form-control">
+      </div>
+    </div> -->
+    <br>
+  </div>
+  <div class="container">
+    <div class="row custom-wrapper">
+      <div class="col-md-12 btn-box">
+        <button type="submit" class="btn btn-primary btn-sm-2 text-white btn-save">Save</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger btn-sm-2 text-white btn-cancel" aria-label="Close" (click)="modal.dismiss('Cross click')">Close</button> <br/>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <!-- </div> -->
+  </form>
+  </div>
+  
