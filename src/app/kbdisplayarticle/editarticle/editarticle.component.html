@@ -10,20 +10,23 @@
     </div>
 
 
-<!--      
-    <form [formGroup]="kb" (ngSubmit)="UpdateItem()"> -->
-<div class="col-md-8" style="">
-<div id="dvarticlecontainer" style="display: inline-block; vertical-align: top;border-right:1px solid #d8d8d8;padding-top:20px">
-<div class="row table-responsive content" style="padding:40px">
+     
+    <form [formGroup]="kb" (ngSubmit)="onEditArticle()">
+<div class="col-md-8" style = " "> 
+<!-- <div  style="display: inline-block; vertical-align: top;border-right-width:2px solid #ddd7d7;padding-top:20px">  -->
+<div class="row table-responsive content" style="padding: 30px">
 <table class="table table-bordered">
    <tbody>
       <tr>
+         <div class="form-group">
          <td style="width:150px;"> Article Name<span style="color:red">*</span></td>
          <td>
-            <input type="text"  id="idarticlename" style="width:300px;">
+            <input formControlName="ArticleName" type="text"  class="form-controll" style="width:300px;">
          </td>
+         </div>
       </tr>
       <tr>
+         <div class="form-group">
          <td> Category</td>
          <td>
             <select data-val="true" data-val-number="The field CategoryId must be a number." id="ideditcategory" name="CategoryId" style="width:300px;">
@@ -31,18 +34,24 @@
                <option value="3">Office - Practice Management</option>
                <option value="2">Surgical Authorizations &amp; Verifications</option> -->
                <option value="">Choose your category</option>
-               <option *ngFor="let item of arr" [value]="item.category1">{{item.CategoryId}}</option>
+               <option *ngFor="let item of arr" [value]="item.CategoryName">{{item.CategoryName}}</option>
             </select>
          </td>
+      </div>
       </tr>
       <tr>
-         <td> Description</td>
+         <div class="form-group">
+         <td> Description  </td>
+      </div>
+        <tr>
+       <ejs-richtexteditor></ejs-richtexteditor>
       </tr>
    </tbody>
 </table>
+
 </div>
 </div>
-</div>
+</form>
  </div>
  
     

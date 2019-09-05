@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { EditarticleRoutingModule } from './editarticle.routing';
 import { EditarticleComponent } from './editarticle.component';
+import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EditarticleComponent } from './editarticle.component';
   imports: [
     CommonModule,
     EditarticleRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RichTextEditorAllModule,
   ]
 })
 
