@@ -1,1 +1,86 @@
-<p>kbdisplayarticle works!</p>
+<div>
+    <div class="header" style="background-color: white">
+      <a  class="font-light m-b-xs titlename">Knowledge Base/Articles</a>
+      <div class="header-right">
+        <a class=""  style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
+        <i class="fa fa-users" aria-hidden="true"></i> My Dashboard
+        </a>
+        <a class="" (click)=" myArticle()"  style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
+        <i class="fa fa-list"></i> My Articles
+        </a>
+        <button class="btn btn-white btn-xs"  style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;" (click)="openAddPopup(content1)">  <i class="fa fa-book"></i>Add Article</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="first" class="col-md-12" style="background-color:rgba(246, 242, 242, 0.863);">
+        <div id="dvarticlecontainer" style="display: inline-block; vertical-align: top;border-right:1px solid grey;padding-top:20px">
+          <div id="allarticletabview">
+            <div *ngFor="let item of arr &&  filterdArticle || arr;let i=index">
+              <div class="container" *ngIf="item.isAdmin;else falseblock">
+                <img src='{{item.image1}}' alt="Avatar" style="width:90px">
+                <h3 class="mb-2">{{item.article_name}}</h3>
+                <span style="padding-right:20px;">{{item.published_date}} {{item.published_time}}</span>
+                <span style="padding-right:20px;">{{item.category}}</span>
+                <span style="padding-right:20px;">{{item.created_by}}</span>
+                <p>{{item.description}}</p>
+                <span style="padding-right:20px;"><button class="firstbut" class="btn btn-primary btn-xs" (click)='onReadMore(item)'>Read More</button></span>
+                <button class="btn btn-primary btn-xs"  (click)="openEdit(i)">Edit</button>
+              </div>
+              <ng-template #falseblock>
+                <div class="container">
+                  <img src='{{item.image1}}' alt="Avatar" style="width:90px">
+                  <h3 class="mb-2">{{item.article_name}}</h3>
+                  <span style="padding-right:20px;">{{item.published_date}} {{item.published_time}}</span>
+                  <span style="padding-right:20px;">{{item.category}}</span>
+                  <span style="padding-right:20px;">{{item.created_by}}</span>
+                  <p>{{item.description}}</p>
+                  <span style="padding-right:20px;">&nbsp;<button  class="btn btn-primary btn-xs" (click)='onReadMore(item)'>Read More</button>
+                  </span>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="dvarticlecontainer" style="display: inline-block; vertical-align: top;padding-top:20px"> -->
+        <div style="display: inline-block; vertical-align: top;padding-top:30px; padding-left:10px">
+          <div id="dvSearch">
+            <div style="font-size:medium">
+              <label>Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            </div>
+            <form class="form-inline mr-auto ">
+              <!-- <input class="form-control " type="text" placeholder="Search for Designation" aria-label="Search" (keyup)='onSearch(d.value)' name='n1' #d id='search-box-round'> -->
+              <input type="text"  id="txtbxsearch" style="width: 70%;height: 35px;" name='n1' #f placeholder=" Article Name / Description">
+              <button class="btn btn-primary" type='submit' (click)='onSearch(f.value)'><b>Search</b></button>
+            </form>
+            <hr style="border: 1px solid #d4cfc3;">
+            <h3 style="margin-top:30px;">Categories</h3>
+            <ul style="list-style: none;padding-left: 0px;width: 100%;">
+              <form>
+                <label>
+                  <input type="checkbox" (click)="Search()" id="checkboxmyarticle">Show All
+                  <!-- <input  type="radio" (onclick)="Search()" name="categories" formControlName="categories" value="Show All">Show All -->
+                </label>
+                <br>
+                <label>
+                  <input type="checkbox" (click)="Search1()" id="checkboxmyarticle">Accounts Recivables - Collections
+                  <!-- <input type="radio" ngModel="value" (click)="Search1()" name="categories" formControlName="categories" value="Accounts Recivables - Collections">Accounts Recivables - Collections -->
+                </label>
+                <br>
+                <label>
+                  <input type="checkbox" (click)="Search2()" id="checkboxmyarticle">Office - Practice Management
+                  <!-- <input type="radio" ngModel="value" (click)="Search2()" name="categories" formControlName="categories" value="Office - Practice Management">Office - Practice Management -->
+                </label>
+                <br>
+                <label>
+                  <input type="checkbox" (click)="Search3()" id="checkboxmyarticle">Surgical Authorizations & Verifications
+                  <!-- <input type="radio" ngModel="value" (click)="Search3()" name="categories" formControlName="categories" value="Surgical Authorizations & Verifications">Surgical Authorizations & Verifications -->
+                </label>
+                <br>
+              </form>
+            </ul>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
