@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-kbdisplayarticle',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kbdisplayarticle.component.css']
 })
 export class KbdisplayarticleComponent implements OnInit {
+  Article_name:string;
+  Category:string;
+  Content:string;
+  
+  
 
-  constructor() { }
+
+  constructor(private fb: FormBuilder) { }
+  kb: FormGroup;
+
 
   ngOnInit() {
+
   }
 
 }

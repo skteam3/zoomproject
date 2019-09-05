@@ -97,10 +97,19 @@ span.card-minititle {
   margin: 0px 23px;
 }
 
-mat-sidenav-container.main-sidenav-container.mat-drawer-container.mat-sidenav-container.mat-drawer-transition {
+mat-sidenav-container.main-sidenav-container.mat-sidenav-container {
 
   height: 1077px;
+
 }
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: table;
+  height: -webkit-fill-available;
+  overflow: auto;
+}
+
 .mat-sidenav-fixed {
   position: fixed;
   background-color: lightgrey;
