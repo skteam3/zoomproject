@@ -1,17 +1,26 @@
+<ul class="nav justify-content-end">
+  <h1 class="header">Knowledge Base / Articles</h1>
+  <li class="nav-item">
+    <a class="nav-link active" ><span class='fa fa-group'></span> Dashboard</a>
+  </li>
+  <div class="vertical">
+
+  </div>
+  <li class="nav-item">
+    <a class="nav-link" (click)=" myArticle()"><span class='fa fa-list'></span>My Articles</a>
+  </li>
+  <div class="vertical">
+
+  </div>
+  <li class="nav-item">
+    <a class="nav-link" (click)="openAdd()"><span class='fa fa-book'></span>Add Articles</a>
+  </li>
+  <div class="vertical">
+
+  </div>
+</ul>
 <div>
-    <div class="header" style="background-color: white">
-      <a  class="font-light m-b-xs titlename">Knowledge Base/Articles</a>
-      <div class="header-right">
-        <a class=""  style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
-        <i class="fa fa-users" aria-hidden="true"></i> My Dashboard
-        </a>
-        <a class="" (click)=" myArticle()"  style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
-        <i class="fa fa-list"></i> My Articles
-        </a>
-        <button class="btn btn-white btn-xs"  style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;" (click)="openAddPopup(content1)">  <i class="fa fa-book"></i>Add Article</button>
-      </div>
-    </div>
-    <div class="row">
+<div class="row">
       <div class="first" class="col-md-12" style="background-color:rgba(246, 242, 242, 0.863);">
         <div id="dvarticlecontainer" style="display: inline-block; vertical-align: top;border-right:1px solid grey;padding-top:20px">
           <div id="allarticletabview">
@@ -42,6 +51,7 @@
           </div>
         </div>
         <!-- <div id="dvarticlecontainer" style="display: inline-block; vertical-align: top;padding-top:20px"> -->
+<<<<<<< HEAD
         <div style="display: inline-block; vertical-align: top;padding-top:30px; padding-left:10px">
           <div id="dvSearch">
             <div style="font-size:medium">
@@ -84,7 +94,11 @@
             </ul>
           </div>
         </div>
+=======
+
+>>>>>>> 0acb1bbb647bb414a09ea989ff3db7fcec908f60
         <!-- </div> -->
+          <app-searcharticle></app-searcharticle>
       </div>
     </div>
   </div>
