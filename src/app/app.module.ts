@@ -10,6 +10,8 @@ import { SearcharticleModule } from './kbdisplayarticle/searcharticle/searcharti
 import { EditarticleModule } from './kbdisplayarticle/editarticle/editarticle.module';
 import { KbdisplayarticleModule } from './kbdisplayarticle/kbdisplayarticle.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { LoginModule } from './login/login.module';
+
 
 
 
@@ -17,6 +19,7 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
   declarations: [
     AppComponent,
     MainLayoutComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
     AddArticleModule,
     SearcharticleModule,
     EditarticleModule,
+    LoginModule,
     approuting,
+
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatToolbarModule,
